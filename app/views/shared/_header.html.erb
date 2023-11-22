@@ -1,5 +1,19 @@
 <header class="header">
   <div class="header__bar row">
     <h1 class="grid-6"><a href="/">47都道府県制覇の旅</a></h1>
+    <% if user_signed_in? %>
+      <div class="user_nav grid-6">
+        <%= link_to "#{current_user.nickname}さん", edit_user_path(current_user), class: "post" %>
+        <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>  
+      </div>
+    <% else %>
+      <div class="grid-6">
+        <%= link_to "ログイン", new_user_session_path, class: "post" %>
+        <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+      </div>
+      <div class="grid-6">
+        <%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class: "btn btn-outline-secondary mr-3" %>
+      </div>
+    <% end %>
   </div>
 </header>
