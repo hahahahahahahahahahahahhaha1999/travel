@@ -1,24 +1,42 @@
-# README
+## users テーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| nickname           | string     | null: false                    |
+| email              | string     | null: false                    |
+| encrypted_password | string     | null: false                    | 
 
-Things you may want to cover:
+### Association
 
-* Ruby version
+has_many :travels
 
-* System dependencies
 
-* Configuration
+## prefectures テーブル
 
-* Database creation
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| name               | string     | null: false                    |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- has_many :travels
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## travels テーブル
 
-* ...
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| title              | string     | null: false                    |
+| check_in           | date       | null: false                    |
+| check_out          | date       | null: false                    |
+| partner            | string     | null: false                    |
+| price              | integer    | null: false                    |
+| travel_site        | integer    | null: false                    |
+| content            | text       | null: false                    |
+| user               | references | null: false, foreign_key: true | 
+| prefecture        | references | null: false, foreign_key: true | 
+
+### Association
+
+- belongs_to :user
+- belongs_to :prefecture
