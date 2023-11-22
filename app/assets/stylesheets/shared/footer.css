@@ -1,0 +1,14 @@
+footer {
+  height: 50px;
+  color: black;
+  background-color: #57C3E9;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+footer p {
+  text-align: center;
+  line-height: 50px;
+}
