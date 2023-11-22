@@ -1,15 +1,6 @@
-<%= form_with(model: @travel, local: true) do |f| %>
-  <% if travel.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(travel.errors.count, 'error') %> prohibited this travel from being saved:</h2>
-      <ul>
-        <% travel.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  
+<%= form_with(model: @article, local: true) do |f| %>
+    
+  <h3>編集する</h3>
   <div class="img-upload">
     <div class="weight-bold-text">
       商品画像
@@ -21,7 +12,7 @@
       </p>
       <%= f.file_field :image, id:"item-image" %>
     </div>
-    <%= image_tag(@travel.image) if @travel.image.attached? %>
+    <%= image_tag(@article.image) if @article.image.attached? %>
   </div>
 
   <div class="field">

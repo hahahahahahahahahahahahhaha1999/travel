@@ -1,0 +1,37 @@
+ja:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "は入力必須です"
+              taken: "は既に使用されています"
+            password:
+              blank: "は入力必須です"
+            nickname:
+              blank: "は入力必須です"
+        article:
+          attributes:
+            prefecture:
+              required: "都道府県を選択してください"
+            title:
+              blank: "タイトルは入力必須です"
+            image:
+              blank: "画像を挿入してください"
+            check_in:
+              blank: "チェックイン日は入力必須です"
+            check_out:
+              blank: "チェックアウト日は入力必須です"
+            price:
+              blank: "価格は入力必須です"
+            content:
+              blank: "内容は入力必須です"
+            partner_id:
+              other_than: "パートナーを選択してください"
+            travel_site_id:
+              other_than: "旅行サイトを選択してください"
+
+
+
+

@@ -3,46 +3,46 @@
   <div class="container">
     <h1 class="prefecture-name"><%= @prefecture.name %></h1>
 
-    <% if @travels.any? %>
+    <% if @articles.any? %>
       <ul class='item-lists'>
-        <% @travels.each do |travel| %>
+        <% @articles.each do |article| %>
           <li class='list'>
             <div class="field">
-              <strong>Title:</strong> <%= travel.title %>
+              <strong>Title:</strong> <%= article.title %>
             </div>
 
             <div class="img-upload">
-              <%= image_tag(travel.image, :size =>'400x700') if travel.image.attached? %>
+              <%= image_tag(article.image, :size =>'400x700') if article.image.attached? %>
             </div>
 
             <div class="field">
-              <strong>Check-in:</strong> <%= travel.check_in %>
+              <strong>Check-in:</strong> <%= article.check_in %>
             </div>
 
             <div class="field">
-              <strong>Check-out:</strong> <%= travel.check_out %>
+              <strong>Check-out:</strong> <%= article.check_out %>
             </div>
 
             <div class="field">
-              <strong>Partner:</strong> <%= travel.partner.name %>
+              <strong>Partner:</strong> <%= article.partner.name %>
             </div>
 
             <div class="field">
-              <strong>Price:</strong> <%= travel.price %>
+              <strong>Price:</strong> <%= article.price %>
             </div>
 
             <div class="field">
-              <strong>Travel Site:</strong> <%= travel.travel_site.name %>
+              <strong>Travel Site:</strong> <%= article.travel_site.name %>
             </div>
 
             <div class="field">
               <strong>Content:</strong>
-              <%= travel.content %>
+              <%= article.content %>
             </div>
 
-            <%= link_to "Edit Article", edit_travel_path(travel.id), method: :get, class: "item-red-btn" %>
+            <%= link_to "Edit Article", edit_article_path(article.id), method: :get, class: "item-red-btn" %>
             <p class="or-text">or</p>
-            <%= link_to "Delete", travel_path(travel.id), data:{ turbo_method: :delete }, class:"item-destroy" %>
+            <%= link_to "Delete", article_path(article.id), data:{ turbo_method: :delete }, class:"item-destroy" %>
           </li>
         <% end %>
       </ul>
@@ -50,7 +50,7 @@
       <p>No travel articles available.</p>
     <% end %>
 
-    <%= link_to 'New Travel Article', new_travel_path, class: "new-article-btn" %>
+    <%= link_to 'New Travel Article', new_article_path, class: "new-article-btn" %>
     <%= link_to 'Back', root_path, class: "back-btn" %>
   </div>
 <%= render "shared/footer" %>
