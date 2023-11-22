@@ -1,0 +1,59 @@
+<%= render "shared/header" %>
+
+  <div class="container">
+    <h1 class="prefecture-name"><%= @prefecture.name %></h1>
+
+    <% if @travels.any? %>
+      <ul class='item-lists'>
+        <% @travels.each do |travel| %>
+          <li class='list'>
+            <div class="field">
+              <strong>Title:</strong> <%= travel.title %>
+            </div>
+
+            <div class="img-upload">
+              <%= image_tag(travel.image, :size =>'400x700') if travel.image.attached? %>
+            </div>
+
+            <div class="field">
+              <strong>Check-in:</strong> <%= travel.check_in %>
+            </div>
+
+            <div class="field">
+              <strong>Check-out:</strong> <%= travel.check_out %>
+            </div>
+
+            <div class="field">
+              <strong>Partner:</strong> <%= travel.partner.name %>
+            </div>
+
+            <div class="field">
+              <strong>Price:</strong> <%= travel.price %>
+            </div>
+
+            <div class="field">
+              <strong>Travel Site:</strong> <%= travel.travel_site.name %>
+            </div>
+
+            <div class="field">
+              <strong>Content:</strong>
+              <%= travel.content %>
+            </div>
+
+            <%= link_to "Edit Article", edit_travel_path(travel.id), method: :get, class: "item-red-btn" %>
+            <p class="or-text">or</p>
+            <%= link_to "Delete", travel_path(travel.id), data:{ turbo_method: :delete }, class:"item-destroy" %>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>No travel articles available.</p>
+    <% end %>
+
+    <%= link_to 'New Travel Article', new_travel_path, class: "new-article-btn" %>
+    <%= link_to 'Back', root_path, class: "back-btn" %>
+  </div>
+<%= render "shared/footer" %>
+
+
+
