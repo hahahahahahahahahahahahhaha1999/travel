@@ -8,7 +8,7 @@
 
 ### Association
 
-has_many :travels
+has_many :articles
 
 
 ## prefectures テーブル
@@ -19,10 +19,10 @@ has_many :travels
 
 ### Association
 
-- has_many :travels
+- has_many :articles
 
 
-## travels テーブル
+## articles テーブル
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |

@@ -6,7 +6,7 @@ header.header {
   left: 0;
   right: 0;
   z-index: 5;
-  height: 50px;
+  height: 70px;
   background-color: #57C3E9;
 }
 
@@ -19,6 +19,7 @@ header.header div.header__bar.row h1.grid-6 {
   line-height: 41px;
   float: left;
   margin-top: 10px;
+  text-align:center
 }
 
 header.header div.header__bar.row h1.grid-6 a {
