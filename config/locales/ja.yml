@@ -9,6 +9,10 @@ ja:
               taken: "は既に使用されています"
             password:
               blank: "は入力必須です"
+              invalid: "は無効です"
+            password_confirmation:
+              blank: "は入力必須です"
+              confirmation: "がパスワードと一致しません"
             nickname:
               blank: "は入力必須です"
         article:
