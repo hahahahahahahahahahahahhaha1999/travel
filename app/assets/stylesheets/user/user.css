@@ -55,22 +55,33 @@
   padding: 10px;
   letter-spacing: 1px;
 }
-.account-page .btn {
+
+.account-page .btn, .account-page .btn-guest {
   display: inline-block;
   height: 50px;
-  padding: 0 30px;
   line-height: 50px;
   letter-spacing: 1px;
   text-align: center;
   border: none;
   border-radius: 2px;
 }
-.account-page input[type=submit] {
-  float: left;
-  margin-top: 20px;
+
+.account-page .btn {
+  margin-top: 30px;
+  padding: 0 50px;
   color: #fff;
   background-color: #38aef0;
 }
+
+.account-page .btn-guest {
+  padding: 0 37px;
+  color: #fff;
+  background-color: #3CB371;
+  margin-top: 20px;
+  text-decoration: none;
+
+}
+
 .account-page .field-label .field_with_errors {
   display: inline-block;
   color: #d65f4c;

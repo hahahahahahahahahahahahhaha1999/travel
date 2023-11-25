@@ -1,58 +1,74 @@
 <%= render "shared/header" %>
 
-  <div class="container">
+  <div class="article-new-btn">
     <h1 class="prefecture-name"><%= @prefecture.name %></h1>
-
+    <div class="new-btns">
+      <%= link_to '新規投稿する', new_article_path, class: "new-btn" %>
+      <%= link_to '戻る', root_path, class: "back-article-btn" %>
+    </div>
+  </div>
+  <div class="container">
     <% if @articles.any? %>
       <ul class='item-lists'>
         <% @articles.each do |article| %>
           <li class='list'>
-            <div class="field">
-              <strong>Title:</strong> <%= article.title %>
+            <div class="article-top-title">
+              <div class="article-title">
+                <%= article.title %>
+              </div>
+              <div class="article-nickname">
+                <%= article.user.nickname %> さん
+              </div>
             </div>
 
-            <div class="img-upload">
-              <%= image_tag(article.image, :size =>'400x700') if article.image.attached? %>
-            </div>
+              <div class="img-upload">
+                <%= image_tag(article.image, :size =>'500x700') if article.image.attached? %>
+              </div>
 
-            <div class="field">
-              <strong>Check-in:</strong> <%= article.check_in %>
-            </div>
+              <div class="article-sub">
+                <div class="field">
+                  <strong class="strong">チェックイン日:</strong>
+                  <div class="article-container">
+                    <%= article.check_in %>
+                  </div>
+                </div>
 
-            <div class="field">
-              <strong>Check-out:</strong> <%= article.check_out %>
-            </div>
+                <div class="field">
+                   <strong class="strong">チェックアウト日:</strong>
+                  <div class="article-container">
+                    <%= article.check_out %>
+                  </div>
+                </div>
+                <div class="field">
+                  <strong class="strong">パートナー:</strong>
+                  <div class="article-container">
+                    <%= article.partner.name %>
+                  </div>
+                </div>
+              </div>
 
-            <div class="field">
-              <strong>Partner:</strong> <%= article.partner.name %>
-            </div>
-
-            <div class="field">
-              <strong>Price:</strong> <%= article.price %>
-            </div>
-
-            <div class="field">
-              <strong>Travel Site:</strong> <%= article.travel_site.name %>
-            </div>
-
-            <div class="field">
-              <strong>Content:</strong>
-              <%= article.content %>
-            </div>
-
-            <%= link_to "Edit Article", edit_article_path(article.id), method: :get, class: "item-red-btn" %>
-            <p class="or-text">or</p>
-            <%= link_to "Delete", article_path(article.id), data:{ turbo_method: :delete }, class:"item-destroy" %>
-          </li>
-        <% end %>
-      </ul>
+                <div class="field">
+                  <strong class="strong">見どころ:</strong>
+                  <div class="article-content">
+                    <%= article.content %>
+                  </div>
+                </div>
+              
+              <div class="edit-destroy">
+                <% if user_signed_in? && current_user.id == article.user_id %>
+                  <%= link_to "編集", edit_article_path(article.id), method: :get, class: "article-edit-btn" %>
+                  <p class="or-text">or</p>
+                  <%= link_to "削除", article_path(article.id), data:{ turbo_method: :delete }, class:"article-destroy-btn" %>
+                <% end %>
+              </div>
+            </li>
+      <% end %>
+        </ul>
     <% else %>
       <p>No travel articles available.</p>
     <% end %>
-
-    <%= link_to 'New Travel Article', new_article_path, class: "new-article-btn" %>
-    <%= link_to 'Back', root_path, class: "back-btn" %>
   </div>
+  
 <%= render "shared/footer" %>
 
 

@@ -1,0 +1,54 @@
+.main-articles {
+  padding-bottom: 70px; 
+  box-sizing: border-box; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+ 
+}
+
+
+.sub-articles {
+  width: 50%; 
+  max-width: 600px; 
+}
+
+
+.img-upload, .field {
+  margin-bottom: 20px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  
+}
+.indispensable {
+  color: red;
+}
+
+.click-upload {
+  border: 2px dashed #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.wide-text-area {
+  width: 300px;
+  height: 100px;
+  /* 他のスタイルを追加できます */
+}
+
+
+.back-btn {
+  text-decoration: none;
+  background-color: #ccc;
+}
+
+
+.check .field {
+  margin-right: 20px; /* 適切なスペースを設定してください */
+}
+
+

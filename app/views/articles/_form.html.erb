@@ -1,59 +1,77 @@
-<%= form_with(model: @article, local: true) do |f| %>
-  <div class="img-upload">
-    <div class="weight-bold-text">
-      商品画像
-      <span class="indispensable">必須</span>
+<div class="main-articles">
+  <%= form_with(model: @article, local: true) do |f| %>
+    <div class="sub-articles">
+      <div class="img-upload">
+        <div class="weight-bold-text">
+          商品画像
+          <span class="indispensable">必須</span>
+        </div>
+        <div class="click-upload">
+          <p>
+            クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :image, id:"item-image" %>
+        </div>
+        <%= image_tag(@article.image) if @article.image.attached? %>
+      </div>
+      <div class="field">
+        <%= f.label :prefecture_id %>
+        <span class="indispensable">必須</span>
+        <%= f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "Select a prefecture" %>
+      </div>
+      <div class="field">
+        <%= f.label :タイトル %>
+        <span class="indispensable">必須</span>
+        <%= f.text_field :title %>
+      </div>
+
+      <div class="check">
+        <div class="field">
+          <div class="label-container">
+            <%= f.label :チェックイン日, "Check In", class: "wide-label" %>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.date_field :check_in %>
+        </div>
+
+        <div class="field">
+          <div class="label-container">
+            <%= f.label :チェックアウト日, "Check Out", class: "wide-label" %>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.date_field :check_out %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= f.label :パートナー %>
+        <span class="indispensable">必須</span>
+        <%= f.collection_select(:partner_id, Partner.all, :id, :name, {}, {class:"select-box"})%>
+      </div>
+
+      <div class="field">
+        <%= f.label :料金 %>
+        <span class="indispensable">必須</span>
+        <%= f.number_field :price %>
+      </div>
+
+      <div class="field">
+        <%= f.label :旅行サイト %>
+        <%= f.collection_select(:travel_site_id, TravelSite.all, :id, :name, {}, {class:"select-box"})%>
+      </div>
+
+      <div class="field">
+        <%= f.label :内容 %>
+        <span class="indispensable">必須</span>
+        <%= f.text_area :content, class: "wide-text-area" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "投稿する", class: "new-article-btn" %>
+      </div>
+      <div class="actions">
+        <%= link_to '戻る', root_path, class: "back-btn" %>
+      </div>
     </div>
-    <div class="click-upload">
-      <p>
-        クリックしてファイルをアップロード
-      </p>
-      <%= f.file_field :image, id:"item-image" %>
-    </div>
-    <%= image_tag(@article.image) if @article.image.attached? %>
-  </div>
-
-  <div class="field">
-    <%= f.label :prefecture_id %>
-    <%= f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "Select a prefecture" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= f.label :check_in %>
-    <%= f.date_field :check_in %>
-  </div>
-
-  <div class="field">
-    <%= f.label :check_out %>
-    <%= f.date_field :check_out %>
-  </div>
-
-  <div class="field">
-    <%= f.label :partner %>
-    <%= f.collection_select(:partner_id, Partner.all, :id, :name, {}, {class:"select-box"})%>
-  </div>
-
-  <div class="field">
-    <%= f.label :price %>
-    <%= f.number_field :price %>
-  </div>
-
-  <div class="field">
-    <%= f.label :travel_site %>
-    <%= f.collection_select(:travel_site_id, TravelSite.all, :id, :name, {}, {class:"select-box"})%>
-  </div>
-
-  <div class="field">
-    <%= f.label :content %>
-    <%= f.text_area :content %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+  <% end %>
+</div>

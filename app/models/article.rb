@@ -11,7 +11,7 @@ class Article < ApplicationRecord
   end
 
   with_options numericality: { other_than: 1 } do
-    validates :partner_id, :travel_site_id
+    validates :partner_id
   end
 
   validates :price, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 9_999_999, allow_blank: true },
