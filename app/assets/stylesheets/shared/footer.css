@@ -1,14 +1,22 @@
 footer {
-  height: 50px;
+  height: 70px;
   color: black;
-  background-color: #57C3E9;
+  background-color: #87CEFA;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #D8D8D8;
+  z-index: 2;
+  font-size: 40px;
+  font-weight: 900;
 }
 
 footer p {
-  text-align: center;
-  text-align:center
+  color: aliceblue;
+  text-align: center; 
+  margin: 0; 
 }

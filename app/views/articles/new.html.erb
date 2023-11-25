@@ -1,7 +1,8 @@
+<%= render "shared/header" %>
 <h1>New Travel</h1>
 
 <%= render 'shared/error_messages', model: @article %>
 
 <%= render 'form', article: @article, prefecture_id: @article.prefecture_id %>
 
-<%= link_to 'Back', root_path %>
+<%= render "shared/footer" %>
