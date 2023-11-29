@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      redirect_to prefecture_path(@article.prefecture), notice: 'Article was successfully updated.'
+      redirect_to edit_user_path(current_user), notice: 'Article was successfully updated.'
     else
       render :edit, status: :unprocessable_entity
     end
