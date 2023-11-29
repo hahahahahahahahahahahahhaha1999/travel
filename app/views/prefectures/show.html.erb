@@ -32,7 +32,6 @@
                     <%= article.check_in %>
                   </div>
                 </div>
-
                 <div class="field">
                    <strong class="strong">チェックアウト日:</strong>
                   <div class="article-container">
@@ -53,14 +52,6 @@
                     <%= article.content %>
                   </div>
                 </div>
-              
-              <div class="edit-destroy">
-                <% if user_signed_in? && current_user.id == article.user_id %>
-                  <%= link_to "編集", edit_article_path(article.id), method: :get, class: "article-edit-btn" %>
-                  <p class="or-text">or</p>
-                  <%= button_to "削除", article_path(article.id), method: :delete, class:"article-destroy-btn" %>
-                <% end %>
-              </div>
             </li>
       <% end %>
         </ul>

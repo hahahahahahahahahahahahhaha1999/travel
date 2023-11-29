@@ -1,4 +1,3 @@
- 
  /* index.html.erb */
  .map-main {
   position: absolute;
@@ -99,7 +98,7 @@
 }
 
 
-/* show.html.erb */
+/* show.html.erb */ /* user/edit.html.erb */
 .contribution {
   position: fixed;
   top: 60px;
@@ -186,10 +185,14 @@
   justify-content: space-between;
 }
 
+.prefecture-name-article {
+  font-size: 30px;
+  color: #ff5555;
+}
+
 .article-title {
   font-weight: bold;
   font-size: 35px;
-  margin-left: 300px;
   margin-bottom: 20px;
 }
 

@@ -1,14 +1,15 @@
 .main-articles {
+  padding-top: 100px;
   padding-bottom: 100px; 
-  box-sizing: border-box; 
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 120vh;
+  height: 140vh;
 }
 
 
 .sub-articles {
+  margin-top: 50px;
   width: 50%; 
   max-width: 600px; 
 }
