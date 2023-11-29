@@ -5,4 +5,9 @@ class Users::SessionsController < Devise::SessionsController
     flash[:notice] = 'ゲストユーザーとしてログインしました。'
     redirect_to root_path
   end
+  def guest_check
+    if current_user == User.find(1)
+      redirect_to root_path, notice: "このページを見るには会員登録が必要です。"
+    end
+  end
 end

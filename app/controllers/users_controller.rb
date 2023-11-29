@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:edit, :update]
+  before_action :guest_check, only: [:edit, :update]
+
   def edit
+    @articles = current_user.articles
   end
 
   def update
@@ -14,5 +18,19 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:nickname, :email)
+  end
+  
+  def set_user
+    if params[:id] == 'guest_sign_in'
+      @user = User.guest
+    else
+      @user = User.find(params[:id])
+    end
+  end
+
+  def guest_check
+    if @user == User.guest
+      redirect_to root_path, notice: "Guest users cannot access this page."
+    end
   end
 end

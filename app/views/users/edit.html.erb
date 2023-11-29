@@ -1,10 +1,12 @@
+<%= render "shared/header" %>
+
 <div class='account-page' id='account-page'>
   <div class='account-page__inner clearfix'>
     <div class='account-page__inner--left account-page__header'>
       <h2>Edit Account</h2>
       <h5>アカウントの編集</h5>
       <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete }, class: 'btn'%>
-      <%= link_to "チャットページに戻る", :back, class: 'btn'%>
+      <%= link_to "トップに戻る", :back, class: 'btn'%>
     </div>
     <div class='account-page__inner--right user-form'>
       <%= form_with model: current_user, local: true do |f|%>
@@ -31,3 +33,68 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+  <p><%= current_user.nickname %>さんの投稿一覧</p>
+    <% if @articles.present? && @articles.any? %>
+      <ul class='item-lists'>
+        <% @articles.each do |article| %>
+          <li class='list'>
+            <div class="article-top-title">
+              <div class="article-title">
+                <%= article.title %>
+              </div>
+              <div class="article-nickname">
+                <%= article.user.nickname %> さん
+              </div>
+            </div>
+
+              <div class="img-upload">
+                <%= image_tag(article.image, :size =>'500x700') if article.image.attached? %>
+              </div>
+
+              <div class="article-sub">
+                <div class="field">
+                  <strong class="strong">チェックイン日:</strong>
+                  <div class="article-container">
+                    <%= article.check_in %>
+                  </div>
+                </div>
+
+                <div class="field">
+                   <strong class="strong">チェックアウト日:</strong>
+                  <div class="article-container">
+                    <%= article.check_out %>
+                  </div>
+                </div>
+                <div class="field">
+                  <strong class="strong">パートナー:</strong>
+                  <div class="article-container">
+                    <%= article.partner.name %>
+                  </div>
+                </div>
+              </div>
+
+                <div class="field">
+                  <strong class="strong">見どころ:</strong>
+                  <div class="article-content">
+                    <%= article.content %>
+                  </div>
+                </div>
+              
+              <div class="edit-destroy">
+                <% if user_signed_in? && current_user.id == article.user_id %>
+                  <%= link_to "編集", edit_article_path(article.id), method: :get, class: "article-edit-btn" %>
+                  <p class="or-text">or</p>
+                  <%= link_to "削除", article_path(article.id), data:{ turbo_method: :delete }, class:"article-destroy-btn" %>
+                <% end %>
+              </div>
+            </li>
+      <% end %>
+        </ul>
+    <% else %>
+      <p>No travel articles available.</p>
+    <% end %>
+  </div>
+
+<%= render "shared/footer" %>

@@ -36,6 +36,7 @@ header.header div.header__bar.row h1.grid-6 a {
 header.header div.header__bar.row div.grid-6 {
   float: right;
   text-align: right;
+  margin-right: 50px;
 }
 
 header.header div.header__bar.row div.grid-6 a.post {
@@ -43,6 +44,52 @@ header.header div.header__bar.row div.grid-6 a.post {
   display: inline-left;
   margin-left: 10px;
 }
+
+
+header.header .user_nav ul.user__info li {
+  position: relative;
+}
+
+header.header .user_nav .user__info {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 150px;
+  border: 1px solid #d8d8d8;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  z-index: 3; 
+}
+
+header.header .user_nav span:after {
+  content: '▼';
+  font-size: .7em;
+  margin-left: 5px;
+  position: absolute;
+  top: 10px;
+  transform: translateY(-50%);
+ 
+  
+}
+
+header.header .user_nav:hover .user__info {
+  display: block;
+  list-style: none;
+}
+
+header.header .user_nav .user__info li a {
+  display: block;
+  padding: 10px 0;
+  text-align: left;
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+
+
+
 
 
 
