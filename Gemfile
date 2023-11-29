@@ -82,3 +82,6 @@ gem 'active_hash'
 group :production do
   gem 'pg'
 end
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
+gem 'omniauth', '~>2.1.1'
