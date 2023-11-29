@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!
+  before_action :guest_check
   before_action :set_item, only: [:edit, :update, :destroy]
 
   def new
