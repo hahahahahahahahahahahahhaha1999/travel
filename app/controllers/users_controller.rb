@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update]
-  before_action :guest_check, only: [:edit, :update]
+  before_action :guest_check, only: [:update]
 
   def edit
     @articles = current_user.articles

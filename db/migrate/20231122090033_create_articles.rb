@@ -8,7 +8,7 @@ class CreateArticles < ActiveRecord::Migration[7.0]
       t.integer :price,              null: false
       t.integer :travel_site_id,        null: false
       t.text :content,               null: false
-      t.references :user,            null:false, foreign_key:{ on_delete: :cascade }
+      t.references :user,            null:false, foreign_key: true
       t.references :prefecture,      null:false, foreign_key: true
       t.timestamps
     end
