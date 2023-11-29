@@ -107,4 +107,3 @@ var areaLinks = {
     location.href = areaLinks[data.area.code];
   }
   });
-  ;
