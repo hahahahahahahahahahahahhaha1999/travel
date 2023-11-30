@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :articles
 
   validates :nickname, presence: true
-  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, allow_blank: true }
+  validates :password, format: { with: /\A[a-z0-9]+\z/i,, allow_blank: true }
 
   def self.guest
     find_or_create_by!(email: 'guest@example.com') do |user|
