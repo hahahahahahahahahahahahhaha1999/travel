@@ -10,4 +10,4 @@ class Users::SessionsController < Devise::SessionsController
       redirect_to root_path, notice: "このページを見るには会員登録が必要です。"
     end
   end
-end
+  end
