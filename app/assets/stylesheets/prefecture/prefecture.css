@@ -190,15 +190,22 @@
   color: #ff5555;
 }
 
-.article-title {
+.show-article-title {
   font-weight: bold;
   font-size: 35px;
+  margin-bottom: 20px;
+  margin-left: 300px;
+}
+
+.edit-article-title {
+  font-size: 35px;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
 .article-nickname {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 15px;
   margin-top: 10px;
 }
 
@@ -225,6 +232,16 @@
   margin: 10px 20px;
   border-top: solid 6px #1dc1d6;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+}
+
+.article-hotel {
+  background: #e4fcff;
+  border-top: solid 6px #1dc1d6;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+  width: 600px;
+  height: 40px;
+  padding: 10px;
+  margin: 10px 30px;
 }
 
 .article-content {

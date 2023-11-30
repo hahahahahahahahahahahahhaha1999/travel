@@ -44,6 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_29_100747) do
     t.date "check_in", null: false
     t.date "check_out", null: false
     t.integer "partner_id", null: false
+    t.string "hotel", null: false
     t.integer "price", null: false
     t.integer "travel_site_id", null: false
     t.text "content", null: false

@@ -1,5 +1,5 @@
 <div class="main-articles">
-  <%= form_with(model: @article, local: true) do |f| %>
+  <%= form_with(model: @article, local: true, id: 'new_post_id', html: {multipart: true}) do |f| %>
     <div class="sub-articles">
       <div class="img-upload">
         <div class="weight-bold-text">
@@ -10,10 +10,11 @@
           <p>
             クリックしてファイルをアップロード
           </p>
-          <%= f.file_field :image, id:"item-image" %>
+          <%= f.file_field :image, id: 'article_image' %>
         </div>
-        <%= image_tag(@article.image) if @article.image.attached? %>
+        <div id="previews"></div>
       </div>
+      
       <div class="field">
         <%= f.label :prefecture_id %>
         <span class="indispensable">必須</span>
@@ -47,6 +48,11 @@
         <%= f.label :パートナー %>
         <span class="indispensable">必須</span>
         <%= f.collection_select(:partner_id, Partner.all, :id, :name, {}, {class:"select-box"})%>
+      </div>
+
+      <div class="field">
+        <%= f.label :宿泊先 %>
+        <%= f.text_field :hotel %>
       </div>
 
       <div class="field">

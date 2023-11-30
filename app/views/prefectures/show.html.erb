@@ -13,7 +13,7 @@
         <% @articles.each do |article| %>
           <li class='list'>
             <div class="article-top-title">
-              <div class="article-title">
+              <div class="show-article-title">
                 <%= article.title %>
               </div>
               <div class="article-nickname">
@@ -45,6 +45,13 @@
                   </div>
                 </div>
               </div>
+
+                <div class="field">
+                  <strong class="strong">宿泊先:</strong>
+                  <div class="article-hotel">
+                    <%= article.hotel %>
+                  </div>
+                </div>
 
                 <div class="field">
                   <strong class="strong">見どころ:</strong>

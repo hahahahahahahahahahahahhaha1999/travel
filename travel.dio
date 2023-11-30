@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="8XtdyZQsKRdI_xKXeBaH" name="ページ1">
-        <mxGraphModel dx="274" dy="411" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="335" dy="411" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -17,7 +17,7 @@
                     <mxGeometry y="86" width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="6" value="articles" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;hachureGap=4;strokeColor=default;fontFamily=Helvetica;fontColor=default;fillColor=default;" parent="1" vertex="1">
-                    <mxGeometry x="300" y="40" width="160" height="296" as="geometry"/>
+                    <mxGeometry x="300" y="40" width="160" height="326" as="geometry"/>
                 </mxCell>
                 <mxCell id="7" value="title" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Helvetica;fontColor=default;startSize=26;" parent="6" vertex="1">
                     <mxGeometry y="26" width="160" height="30" as="geometry"/>
@@ -31,20 +31,23 @@
                 <mxCell id="10" value="partner" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Helvetica;fontColor=default;startSize=26;" parent="6" vertex="1">
                     <mxGeometry y="116" width="160" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="price" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Helvetica;fontColor=default;startSize=26;" parent="6" vertex="1">
+                <mxCell id="20" value="hotel" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="6">
                     <mxGeometry y="146" width="160" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="12" value="travel_site" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Helvetica;fontColor=default;startSize=26;" parent="6" vertex="1">
+                <mxCell id="11" value="price" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;hachureGap=4;fontFamily=Helvetica;fontColor=default;startSize=26;" parent="6" vertex="1">
                     <mxGeometry y="176" width="160" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="content" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Helvetica;fontColor=default;startSize=26;" parent="6" vertex="1">
+                <mxCell id="12" value="travel_site" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Helvetica;fontColor=default;startSize=26;" parent="6" vertex="1">
                     <mxGeometry y="206" width="160" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="user" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Helvetica;fontColor=default;startSize=26;" parent="6" vertex="1">
+                <mxCell id="13" value="content" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Helvetica;fontColor=default;startSize=26;" parent="6" vertex="1">
                     <mxGeometry y="236" width="160" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" value="prefecture" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Helvetica;fontColor=default;startSize=26;" parent="6" vertex="1">
+                <mxCell id="14" value="user" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Helvetica;fontColor=default;startSize=26;" parent="6" vertex="1">
                     <mxGeometry y="266" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="prefecture" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Helvetica;fontColor=default;startSize=26;" parent="6" vertex="1">
+                    <mxGeometry y="296" width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="16" value="prefectures" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;hachureGap=4;strokeColor=default;fontFamily=Helvetica;fontColor=default;fillColor=default;fillStyle=auto;" parent="1" vertex="1">
                     <mxGeometry x="570" y="115" width="160" height="56" as="geometry"/>
