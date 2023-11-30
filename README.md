@@ -29,7 +29,8 @@ has_many :articles
 | title              | string     | null: false                    |
 | check_in           | date       | null: false                    |
 | check_out          | date       | null: false                    |
-| partner            | string     | null: false                    |
+| partner            | integer    | null: false                    |
+| hotel              | string     | null: false                    |
 | price              | integer    | null: false                    |
 | travel_site        | integer    | null: false                    |
 | content            | text       | null: false                    |

@@ -47,7 +47,7 @@
               <div class="prefecture-name-article">
                 <%= article.prefecture.name if article.prefecture %>
               </div>
-              <div class="article-title">
+              <div class="edit-article-title">
                 <%= article.title %>
               </div>
               <div class="article-nickname">
@@ -95,6 +95,13 @@
                   </div>
                 </div>
               </div>
+
+                <div class="field">
+                  <strong class="strong">宿泊先:</strong>
+                  <div class="article-hotel">
+                    <%= article.hotel if article.hotel %>
+                  </div>
+                </div>
 
                 <div class="field">
                   <strong class="strong">見どころ:</strong>
