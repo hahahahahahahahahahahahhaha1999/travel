@@ -1,2 +1,15 @@
-<%= link_to "メールアドレスで登録", new_user_registration_path%>
-<%= button_to "Googleで登録", user_google_oauth2_omniauth_authorize_path, data: { turbo: false } %>
+<%= render "shared/header" %>
+
+<div class="main-omniauth-authorize">
+  <div class="sub-omniauth-authorize">
+    <%= link_to "ゲストでログインする", users_guest_sign_in_path, method: :post, class: "btn-btn-guest" %>
+  </div>
+  <div class="sub-omniauth-authorize">
+    <%= link_to "メールアドレスで登録", new_user_registration_path, class: "mail-omniauth"  %>
+  </div>
+  <div class="sub-omniauth-authorize">
+    <%= button_to "Googleで登録", user_google_oauth2_omniauth_authorize_path, data: { turbo: false }, class: "google-omniauth" %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
