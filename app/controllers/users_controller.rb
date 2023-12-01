@@ -4,6 +4,8 @@ class UsersController < ApplicationController
 
   def edit
     @articles = current_user.articles
+    @user = User.find(params[:id])
+    @articles = @user.articles
   end
 
   def update
