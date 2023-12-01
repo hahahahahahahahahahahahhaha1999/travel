@@ -7,66 +7,120 @@
       <%= link_to '戻る', root_path, class: "back-article-btn" %>
     </div>
   </div>
-  <div class="container">
+
+  <div class="show-container">
     <% if @articles.any? %>
-      <ul class='item-lists'>
+      <ul class='show-item-lists'>
         <% @articles.each do |article| %>
-          <li class='list'>
+          <li class='show-list'>
             <div class="article-top-title">
               <div class="show-article-title">
                 <%= article.title %>
               </div>
-              <div class="article-nickname">
-                <%= article.user.nickname %> さん
+            </div>
+
+            <div class="show-img-upload">
+              <%= image_tag(article.image, width: '90%', height: '90%' ) if article.image.attached? %>
+            </div>
+
+            <div class="article-sub">
+              <div class="field">
+                <strong class="strong">チェックイン日:</strong>
+                <div class="article-container">
+                  <%= article.check_in %>
+                </div>
+              </div>
+              <div class="field">
+                  <strong class="strong">チェックアウト日:</strong>
+                <div class="article-container">
+                  <%= article.check_out %>
+                </div>
+              </div>
+              <div class="field">
+                <strong class="strong">パートナー:</strong>
+                <div class="article-container">
+                  <%= article.partner.name %>
+                </div>
               </div>
             </div>
 
-              <div class="img-upload">
-                <%= image_tag(article.image, :size =>'500x700') if article.image.attached? %>
+            <div class="field">
+              <strong class="strong">宿泊先:</strong>
+              <div class="article-hotel">
+                <%= article.hotel %>
               </div>
+            </div>
 
-              <div class="article-sub">
-                <div class="field">
-                  <strong class="strong">チェックイン日:</strong>
-                  <div class="article-container">
-                    <%= article.check_in %>
-                  </div>
-                </div>
-                <div class="field">
-                   <strong class="strong">チェックアウト日:</strong>
-                  <div class="article-container">
-                    <%= article.check_out %>
-                  </div>
-                </div>
-                <div class="field">
-                  <strong class="strong">パートナー:</strong>
-                  <div class="article-container">
-                    <%= article.partner.name %>
-                  </div>
-                </div>
+            <div class="field">
+              <strong class="strong">見どころ:</strong>
+              <div class="article-content">
+                <%= article.content %>
               </div>
-
-                <div class="field">
-                  <strong class="strong">宿泊先:</strong>
-                  <div class="article-hotel">
-                    <%= article.hotel %>
-                  </div>
-                </div>
-
-                <div class="field">
-                  <strong class="strong">見どころ:</strong>
-                  <div class="article-content">
-                    <%= article.content %>
-                  </div>
-                </div>
-            </li>
-      <% end %>
-        </ul>
+            </div>
+            <div class="article-nickname">
+              <%= article.user.nickname %> さん
+            </div>  
+          </li>
+        <% end %>
+      </ul>
     <% else %>
-      <p>No travel articles available.</p>
+      <p>[ 投稿記事はありません。記事を投稿してみましょう！]</p>
+      <li class='show-list'>
+        <div class="article-top-title">
+          <div class="show-article-title">
+            サンプル(場所)
+          </div>
+        </div>
+
+        <div class="sample-show-img-upload">
+          <%= image_tag '1603887_s.jpg', width: '90%', height: '90%' %>
+        </div>
+
+        <div class="article-sub">
+          <div class="field">
+            <strong class="strong">チェックイン日:</strong>
+            <div class="article-container">
+              2022-12-02
+            </div>
+          </div>
+          <div class="field">
+              <strong class="strong">チェックアウト日:</strong>
+            <div class="article-container">
+              2022-12-4
+            </div>
+          </div>
+          <div class="field">
+            <strong class="strong">パートナー:</strong>
+            <div class="article-container">
+              友達
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <strong class="strong">宿泊先:</strong>
+          <div class="article-hotel">
+            ホテル
+          </div>
+        </div>
+
+        <div class="field">
+          <strong class="strong">見どころ:</strong>
+          <div class="article-content">
+            （例）夜景が綺麗だった。そんなに混んでなかった。
+          </div>
+        </div>
+        <div class="article-nickname">
+          サンプル さん
+        </div>  
+      </li>
     <% end %>
+    <div class="new-btns">
+      <%= link_to '戻る', root_path, class: "back-article-btn" %>
+    </div>
+    <div class="space"></div>
   </div>
-  
+ 
 <%= render "shared/footer" %>
 
 

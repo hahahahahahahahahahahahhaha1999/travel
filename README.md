@@ -9,6 +9,7 @@
 ### Association
 
 has_many :articles
+has_many :favorites
 
 
 ## prefectures テーブル
@@ -35,9 +36,23 @@ has_many :articles
 | travel_site        | integer    | null: false                    |
 | content            | text       | null: false                    |
 | user               | references | null: false, foreign_key: true | 
-| prefecture        | references | null: false, foreign_key: true | 
+| prefecture         | references | null: false, foreign_key: true | 
 
 ### Association
 
 - belongs_to :user
 - belongs_to :prefecture
+- has_many :favorites
+
+
+## favorites テーブル
+
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| user               | references | null: false, foreign_key: true |
+| article            | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :article

@@ -97,23 +97,27 @@
   border-bottom: 2px solid #4285f4;
 }
 
+.sample-article-explain {
+  font-weight: bold;
+}
 
-/* show.html.erb */ /* user/edit.html.erb */
+
+/* user/edit.html.erb */
+.edit-main-mypage {
+  top: 100px;
+}
+ 
 .contribution {
   position: fixed;
   top: 60px;
   left: 50px;
 }
 
-.container {
-  position: relative;
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.edit-article-list {
+  font-size: 20px;
+  font-weight: 900;
+  padding-left: 50px;
 }
-
 
 .article-new-btn {
   position: absolute;
@@ -128,7 +132,7 @@
 
 .new-btns {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
 }
 
 .new-btn,
@@ -167,22 +171,35 @@
   background-color: #808080;
 }
 
+.edit-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 100px;
+  padding: 20px;
+  border-radius: 8px;
+  height: 200px;
+}
 
 .item-lists {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* アイテム間のスペース（余白） */
 }
 
 .list {
+  width: calc(50% - 20px); /* 2列なので50%幅。余白分を引く */
   border: solid 3px #4ec4d3;
   background-color: #F5FFFA;
   padding: 15px;
   margin-bottom: 20px;
 }
 
-.article-top-title {
-  display: flex;
-  justify-content: space-between;
+.edit-img-upload {
+  height: 300px;
+  margin-left: 50px;
+
 }
 
 .prefecture-name-article {
@@ -194,27 +211,20 @@
   font-weight: bold;
   font-size: 35px;
   margin-bottom: 20px;
-  margin-left: 300px;
+  text-align: center;
 }
 
 .edit-article-title {
   font-size: 35px;
   font-weight: bold;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .article-nickname {
   font-weight: bold;
   font-size: 15px;
   margin-top: 10px;
-}
-
-.img-upload img {
-  display: block;
-  margin: auto;
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
 }
 
 .article-sub {
@@ -225,11 +235,11 @@
 }
 
 .article-container {
-  width: 170px;
+  width: 140px;
   height: 40px;
   background: #e4fcff;
-  padding: 10px 30px;
-  margin: 10px 20px;
+  padding: 10px;
+  margin: 5px;
   border-top: solid 6px #1dc1d6;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
 }
@@ -238,24 +248,25 @@
   background: #e4fcff;
   border-top: solid 6px #1dc1d6;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
-  width: 600px;
+  width: 90%;
   height: 40px;
   padding: 10px;
-  margin: 10px 30px;
+  margin: 10px 20px;
 }
 
 .article-content {
   background: #e4fcff;
   border-top: solid 6px #1dc1d6;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
-  width: 600px;
+  width: 90%;
   height: 150px;
   padding: 10px;
-  margin: 10px 30px;
+  margin: 10px 20px;
 }
 
 .strong {
   margin-left: 20px;
+  font-size: 13px;
 }
 
 
@@ -288,9 +299,6 @@
   font-weight: bold;
 }
 
-
-
-
 .field-container {
   display: flex;
   flex-direction: column;
@@ -305,3 +313,46 @@
   font-weight: bold;
 }
 
+.edit-footer-top {
+  height: 500px;
+}
+
+
+/* show.html.erb */ 
+.show-container {
+  position: relative;
+  max-width: 100%;
+  margin: 300px 100px;
+  padding: 20px;
+  border-radius: 8px;
+  height: 200px;
+}
+
+.show-item-lists {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* アイテム間のスペース（余白） */
+}
+
+.show-list {
+  width: calc(50% - 20px); /* 2列なので50%幅。余白分を引く */
+  border: solid 3px #4ec4d3;
+  background-color: #F5FFFA;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.show-img-upload {
+  height: 300px;
+  margin-left: 50px;
+}
+
+.space {
+  height: 100px; 
+}
+
+.sample-show-img-upload {
+  margin-left: 50px;
+}

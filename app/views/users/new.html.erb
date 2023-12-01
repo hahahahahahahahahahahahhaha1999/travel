@@ -8,8 +8,10 @@
     <%= link_to "メールアドレスで登録", new_user_registration_path, class: "mail-omniauth"  %>
   </div>
   <div class="sub-omniauth-authorize">
-    <%= button_to "Googleで登録", user_google_oauth2_omniauth_authorize_path, data: { turbo: false }, class: "google-omniauth" %>
-  </div>
+  <%= button_to user_google_oauth2_omniauth_authorize_path, method: :post, data: { turbo: false }, class: "google-omniauth" do %>
+    <%= image_tag('web_light_rd_SI@1x.png', alt: 'Google アイコン', class: 'google-icon') %>
+  <% end %>
+  </div>  
 </div>
 
 <%= render "shared/footer" %>
