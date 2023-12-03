@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
   belongs_to :user
-  belongs_to :prefecture, class_name: 'Prefecture'
+  belongs_to :prefecture
   has_one_attached :image
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :partner
