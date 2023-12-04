@@ -17,7 +17,7 @@ ja:
               confirmation: "がパスワードと一致しません"
             nickname:
               blank: "は入力必須です"
-            messages:
+          messages:
             record_invalid: "ユーザーの作成中にエラーが発生しました"
         article:
           attributes:
@@ -25,8 +25,9 @@ ja:
               required: "都道府県を選択してください"
             title:
               blank: "タイトルは入力必須です"
-            image:
+            images:
               blank: "画像を挿入してください"
+              too_long: "は%{count}枚以内で選択してください"
             check_in:
               blank: "チェックイン日は入力必須です"
             check_out:
@@ -37,6 +38,13 @@ ja:
               blank: "内容は入力必須です"
             partner_id:
               other_than: "パートナーを選択してください"
+
+  errors:
+    attributes:
+      images:
+        too_long: "は%{count}枚以内で選択してください"
+    messages:
+      too_long: "は%{count}文字以内で入力してください"
 
 
 

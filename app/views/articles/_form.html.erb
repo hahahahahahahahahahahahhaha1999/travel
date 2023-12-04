@@ -3,20 +3,18 @@
     <div class="sub-articles">
       <div class="img-upload">
         <div class="weight-bold-text">
-          商品画像
+          商品画像(3枚まで)
           <span class="indispensable">必須</span>
         </div>
         <div class="click-upload">
           <p>
             クリックしてファイルをアップロード
           </p>
-          <%= f.file_field :image, id: 'article_image' %>
-        </div>
-        <div id="previews"></div>
+          <%= f.file_field :images, multiple: true %>
       </div>
       
       <div class="field">
-        <%= f.label :prefecture_id %>
+        <%= f.label :都道府県 %>
         <span class="indispensable">必須</span>
         <%= f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "Select a prefecture" %>
       </div>
@@ -78,7 +76,6 @@
       <div class="actions">
         <%= link_to '戻る', root_path, class: "back-btn" %>
       </div>
-      <div class="space"></div>
     </div>
   <% end %>
 </div>
