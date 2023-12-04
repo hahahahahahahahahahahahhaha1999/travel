@@ -34,6 +34,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
+    user_id = current_user&.id
     params.require(:article).permit(:title, :check_in, :check_out, :partner_id, :hotel, :price, :travel_site_id, :content, :prefecture_id, images: []).merge(user_id: current_user.id)
   end
   
