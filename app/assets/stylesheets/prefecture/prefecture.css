@@ -196,11 +196,6 @@
   margin-bottom: 20px;
 }
 
-.edit-img-upload {
-  height: 300px;
-  margin-left: 50px;
-
-}
 
 .prefecture-name-article {
   font-size: 30px;
@@ -333,20 +328,39 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* アイテム間のスペース（余白） */
+  gap: 20px;
+  padding: 0;
 }
 
 .show-list {
-  width: calc(50% - 20px); /* 2列なので50%幅。余白分を引く */
+  width: calc(50% - 20px);
   border: solid 3px #4ec4d3;
   background-color: #F5FFFA;
   padding: 15px;
   margin-bottom: 20px;
 }
 
-.show-img-upload {
+.swiper-container {
+  max-width: 100%;
+  margin: 20px;
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  margin: 20px;
+}
+
+.swiper-slide.index-img {
   height: 300px;
-  margin-left: 50px;
+  width: 300px;
+}
+
+.swiper-wrapper {
+  transform-origin: bottom center;
+  z-index: 1;
+}
+
+.swiper-slide {
+  transform-origin: bottom center;
 }
 
 .space {
@@ -356,3 +370,6 @@
 .sample-show-img-upload {
   margin-left: 50px;
 }
+
+
+

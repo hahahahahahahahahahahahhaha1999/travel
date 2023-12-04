@@ -19,9 +19,17 @@
               </div>
             </div>
 
-            <div class="show-img-upload">
-              <%= image_tag(article.image, width: '90%', height: '90%' ) if article.image.attached? %>
-            </div>
+              <div class="swiper-container">
+                <div class= "swiper-wrapper img-index">
+                  <% article.images.each do |image| %>
+                  <%= image_tag image, class: "swiper-slide index-img" %>
+                  <% end %>
+                </div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            
 
             <div class="article-sub">
               <div class="field">
@@ -72,8 +80,15 @@
           </div>
         </div>
 
-        <div class="sample-show-img-upload">
-          <%= image_tag '1603887_s.jpg', width: '90%', height: '90%' %>
+        <div class="swiper-container">
+          <div class= "swiper-wrapper img-index">
+            <%= image_tag '1603887_s.jpg', class: 'swiper-slide' %>
+            <%= image_tag 'photo0000-1903.jpg', class: 'swiper-slide' %>
+            <%= image_tag 'photo0000-6517.jpg', class: 'swiper-slide' %>
+          </div>
+          <div class="swiper-button-prev swiper-button-white"></div>
+          <div class="swiper-button-next swiper-button-white"></div>
+          <div class="swiper-pagination"></div>
         </div>
 
         <div class="article-sub">

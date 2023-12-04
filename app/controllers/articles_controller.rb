@@ -34,9 +34,9 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :image, :check_in, :check_out, :partner_id, :hotel, :price, :travel_site_id, :content,
-                                   :prefecture_id).merge(user_id: current_user.id)
+    params.require(:article).permit(:title, :check_in, :check_out, :partner_id, :hotel, :price, :travel_site_id, :content, :prefecture_id, images: []).merge(user_id: current_user.id)
   end
+  
 
   def set_item
     @article = Article.find(params[:id])

@@ -1,19 +1,20 @@
 class Article < ApplicationRecord
   belongs_to :user
   belongs_to :prefecture
-  has_one_attached :image
+  has_many_attached :images
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :partner
   belongs_to :travel_site
-  has_many :favorites, dependent: :destroy
 
   def favorited_by?(user)
     favorites.where(user_id: user.id).exists?
   end
 
   with_options presence: true do
-    validates :title, :image, :check_in, :check_out, :partner, :price, :content
+    validates :title, :images, :check_in, :check_out, :partner, :price, :content
   end
+
+  validates :images, length: { minimum: 1, maximum: 3, allow_blank: true}
 
   with_options numericality: { other_than: 1 } do
     validates :partner_id
