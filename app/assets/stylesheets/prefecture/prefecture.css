@@ -185,11 +185,11 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* アイテム間のスペース（余白） */
+  gap: 20px;
 }
 
 .list {
-  width: calc(50% - 20px); /* 2列なので50%幅。余白分を引く */
+  width: calc(50% - 20px);
   border: solid 3px #4ec4d3;
   background-color: #F5FFFA;
   padding: 15px;

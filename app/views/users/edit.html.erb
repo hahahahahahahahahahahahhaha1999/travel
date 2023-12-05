@@ -52,17 +52,16 @@
                   <%= article.title %>
                 </div>
               </div>
-             <div class="swiper-container">
-                <div class= "swiper-wrapper img-index">
+              <div class="swiper-container">
+                <div class="swiper-wrapper img-index">
                   <% article.images.each do |image| %>
-                  <%= image_tag image, class: "swiper-slide index-img" %>
+                    <%= image_tag image, class: "swiper-slide index-img" %>
                   <% end %>
                 </div>
                 <div class="swiper-button-prev swiper-button-white"></div>
                 <div class="swiper-button-next swiper-button-white"></div>
                 <div class="swiper-pagination"></div>
               </div>
-
               <div class="article-sub">
                 <div class="field">
                   <strong class="strong">チェックイン日:</strong>

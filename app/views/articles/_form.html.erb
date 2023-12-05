@@ -10,24 +10,30 @@
           <p>
             クリックしてファイルをアップロード
           </p>
-          <%= f.file_field :images, multiple: true %>
-      </div>
+          <%= f.file_field :images, name: 'article[images][]', data: {index: 0} %>
+          <%= f.file_field :images, name: 'article[images][]', data: {index: 1} %>
+          <%= f.file_field :images, name: 'article[images][]', data: {index: 1} %>
+        </div>
       
       <div class="field">
-        <%= f.label :都道府県 %>
-        <span class="indispensable">必須</span>
-        <%= f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "Select a prefecture" %>
+        <div class="label-container">
+          <%= f.label :都道府県 %>
+          <span class="indispensable">必須</span>
+        </div>
+          <%= f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "Select a prefecture" %>
       </div>
       <div class="field">
-        <%= f.label :タイトル %>
-        <span class="indispensable">必須</span>
+        <div class="label-container">
+          <%= f.label :タイトル %>
+          <span class="indispensable">必須</span>
+        </div>
         <%= f.text_field :title %>
       </div>
 
       <div class="check">
         <div class="field">
           <div class="label-container">
-            <%= f.label :チェックイン日, "Check In", class: "wide-label" %>
+            <%= f.label :チェックイン, class: "wide-label" %>
             <span class="indispensable">必須</span>
           </div>
           <%= f.date_field :check_in %>
@@ -35,7 +41,7 @@
 
         <div class="field">
           <div class="label-container">
-            <%= f.label :チェックアウト日, "Check Out", class: "wide-label" %>
+            <%= f.label :チェックアウト, class: "wide-label" %>
             <span class="indispensable">必須</span>
           </div>
           <%= f.date_field :check_out %>
@@ -43,25 +49,33 @@
       </div>
 
       <div class="field">
-        <%= f.label :パートナー %>
-        <span class="indispensable">必須</span>
+        <div class="label-container">
+          <%= f.label :パートナー %>
+          <span class="indispensable">必須</span>
+        </div>
         <%= f.collection_select(:partner_id, Partner.all, :id, :name, {}, {class:"select-box"})%>
       </div>
 
       <div class="field">
-        <%= f.label :宿泊先 %>
+        <div class="label-container">
+          <%= f.label :宿泊先 %>
+        </div>
         <%= f.text_field :hotel %>
       </div>
 
       <div class="field">
-        <%= f.label :料金 %>
-        <span class="indispensable">必須</span>
+        <div class="label-container">
+          <%= f.label :料金 %>
+          <span class="indispensable">必須</span>
+        </div>
         <%= f.number_field :price %>
       </div>
 
       <div class="field">
-        <%= f.label :旅行サイト %>
-        <%= f.collection_select(:travel_site_id, TravelSite.all, :id, :name, {}, {class:"select-box"})%>
+        <div class="label-container">
+          <%= f.label :旅行サイト %>
+        </div>
+          <%= f.collection_select(:travel_site_id, TravelSite.all, :id, :name, {}, {class:"select-box"})%>
       </div>
 
       <div class="field">
