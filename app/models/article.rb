@@ -5,9 +5,10 @@ class Article < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :partner
   belongs_to :travel_site
+  has_many :likes
 
-  def favorited_by?(user)
-    favorites.where(user_id: user.id).exists?
+  def liked_by?(user)
+    likes.where(user_id: user.id).exists?
   end
 
   with_options presence: true do
