@@ -19,16 +19,16 @@
               </div>
             </div>
 
-              <div class="swiper-container">
-                <div class= "swiper-wrapper img-index">
-                  <% article.images.each do |image| %>
-                  <%= image_tag image, class: "swiper-slide index-img" %>
-                  <% end %>
-                </div>
-                <div class="swiper-button-prev swiper-button-white"></div>
-                <div class="swiper-button-next swiper-button-white"></div>
-                <div class="swiper-pagination"></div>
+            <div class="swiper-container">
+              <div class= "swiper-wrapper img-index">
+                <% article.images.each do |image| %>
+                <%= image_tag image, class: "swiper-slide index-img" %>
+                <% end %>
               </div>
+              <div class="swiper-button-prev swiper-button-white"></div>
+              <div class="swiper-button-next swiper-button-white"></div>
+              <div class="swiper-pagination"></div>
+            </div>
             
 
             <div class="article-sub">
@@ -72,7 +72,7 @@
         <% end %>
       </ul>
     <% else %>
-      <p>[ 投稿記事はありません。記事を投稿してみましょう！]</p>
+      <p class="sample-p">[ 投稿記事はありません。記事を投稿してみましょう！]</p>
       <li class='show-list'>
         <div class="article-top-title">
           <div class="show-article-title">
