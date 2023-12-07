@@ -69,8 +69,7 @@ header.header .user_nav span:after {
   position: absolute;
   top: 10px;
   transform: translateY(-50%);
- 
-  
+ color: #191970;
 }
 
 header.header .user_nav:hover .user__info {
@@ -86,6 +85,8 @@ header.header .user_nav .user__info li a {
   color: black;
   font-size: 15px;
 }
+
+
 
 
 

@@ -6,7 +6,6 @@ class User < ApplicationRecord
   
   has_many :sns_credentials
   has_many :articles
-  has_many :likes
 
   validates :nickname, presence: true
   validates :password, format: {
