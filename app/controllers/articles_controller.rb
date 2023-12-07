@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.destroy
-    redirect_to root_path, status: :see_other
+    redirect_to edit_user_path(current_user), status: :see_other
   end
 
   private

@@ -341,14 +341,14 @@
   margin-bottom: 20px;
 }
 
+
 .swiper-container {
   max-width: 100%;
-  margin: 20px;
+  margin: 90px 20px 20px; /* ヘッダーの高さ分だけ上に余白を追加 */
   overflow: hidden;
   position: relative;
-  max-width: 100%;
-  margin: 20px;
 }
+
 
 .swiper-slide.index-img {
   height: 300px;
@@ -357,7 +357,6 @@
 
 .swiper-wrapper {
   transform-origin: bottom center;
-  z-index: 1;
 }
 
 .swiper-slide {
@@ -375,6 +374,8 @@
 .sample-p {
   font-weight: 900;
 }
+
+
 
 
 
