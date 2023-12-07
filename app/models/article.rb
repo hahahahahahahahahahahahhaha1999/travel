@@ -6,10 +6,6 @@ class Article < ApplicationRecord
   belongs_to :partner
   belongs_to :travel_site
 
-  def favorited_by?(user)
-    favorites.where(user_id: user.id).exists?
-  end
-
   with_options presence: true do
     validates :title, :images, :check_in, :check_out, :partner, :price, :content
   end

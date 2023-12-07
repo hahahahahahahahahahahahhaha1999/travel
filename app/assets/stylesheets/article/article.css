@@ -1,5 +1,7 @@
+/* _form.html.erb */
 .main-articles {
   padding-top: 100px;
+  margin-left: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +11,7 @@
 
 .sub-articles {
   margin-top: 50px;
-  width: 50%; 
+  width: 60%; 
   max-width: 600px; 
 }
 
@@ -26,6 +28,7 @@
 .check {
   display: flex;
   align-items: center;
+
   
 }
 .indispensable {
@@ -51,17 +54,17 @@
 .new-article-btn {
   display: block;
   margin-top: 20px;
-  padding: 10px 115px;
+  padding: 10px 145px;
   background-color: #4285f4;
   color: #fff;
   text-align: center;
   border-radius: 5px;
 }
 
-.back-btn {
+.new-back-btn {
   display: block;
   margin-top: 20px;
-  padding: 10px 15px;
+  padding: 10px;
   background-color: #C0C0C0;
   color: #fff;
   text-decoration: none;
