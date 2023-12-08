@@ -64,10 +64,18 @@
 .new-btn {
   display: block;
   margin-top: 20px;
-  padding: 10px;
+  padding: 10px 100px;
   background-color: #4285f4;
   color: #fff;
   text-align: center;
+  border-radius: 5px;
+}
+
+.back-article-btn {
+  padding: 10px 100px; 
+  border: 1px solid #C0C0C0;
+  color: #FFFFFF;
+  background-color: #C0C0C0;
   border-radius: 5px;
 }
 
