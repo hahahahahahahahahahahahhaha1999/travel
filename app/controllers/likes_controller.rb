@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
- 
+  before_action :set_article, only: [:create, :destroy]
 
   def index
     @articles = Article.includes(:article_images).order("created_at DESC")
@@ -9,21 +9,15 @@ class LikesController < ApplicationController
 
 
   def create
-    @article = Article.find(params[:article_id])
     like = current_user.likes.build(article_id: params[:article_id])
     like.save
-    respond_to do |format|
-      format.js
-    end 
+    redirect_to
   end
 
   def destroy
-    @article = Article.find(params[:article_id])
     like = Like.find_by(article_id: params[:article_id], user_id: current_user.id)
     like.destroy
-    respond_to do |format|
-      format.js
-    end
+    redirect_to
   end
 
   def set_article
