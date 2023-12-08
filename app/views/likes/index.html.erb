@@ -1,0 +1,82 @@
+<%= render "shared/header" %>
+
+<div class="article-new-btn">
+    <p class="edit-article-list">[<%= current_user.nickname %>さんのお気に入り記事一覧]</p>
+  </div>
+
+<div class="show-container">
+  <% if @like_list.present? %>
+    <ul class='show-item-lists'>
+      <% @like_list.each do |article| %>
+        <li class='show-list'>
+            <div class="article-top-title">
+              <div class="prefecture-name-article">
+                <%= article.prefecture.name if article.prefecture %>
+              </div>
+              <div class="edit-article-title">
+                <%= article.title %>
+              </div>
+            </div>
+
+          <div class="swiper-container">
+            <div class= "swiper-wrapper img-index">
+              <% article.images.each do |image| %>
+              <%= image_tag image, class: "swiper-slide index-img" %>
+              <% end %>
+            </div>
+            <div class="swiper-button-prev swiper-button-white"></div>
+            <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+          
+
+          <div class="article-sub">
+            <div class="field">
+              <strong class="strong">チェックイン日:</strong>
+              <div class="article-container">
+                <%= article.check_in %>
+              </div>
+            </div>
+            <div class="field">
+                <strong class="strong">チェックアウト日:</strong>
+              <div class="article-container">
+                <%= article.check_out %>
+              </div>
+            </div>
+            <div class="field">
+              <strong class="strong">パートナー:</strong>
+              <div class="article-container">
+                <%= article.partner.name %>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <strong class="strong">宿泊先:</strong>
+            <div class="article-hotel">
+              <%= article.hotel %>
+            </div>
+          </div>
+
+          <div class="field">
+            <strong class="strong">見どころ:</strong>
+            <div class="article-content">
+              <%= article.content %>
+            </div>
+          </div>
+          <div class="article-nickname">
+            <%= article.user.nickname %> さん
+          </div>  
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p class="edit-article-list">[ お気に入りにした記事はありません]</p>
+  <% end %>
+  <div class="new-btns">
+    <%= link_to '戻る', root_path, class: "back-article-btn" %>
+  </div>
+  <div class="space"></div>
+</div>
+ 
+<%= render "shared/footer" %>

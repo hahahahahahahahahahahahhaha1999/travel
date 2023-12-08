@@ -11,6 +11,9 @@
             <li>
               <%= link_to "ログアウト", destroy_user_session_path, method: :get %>
             </li>
+            <li>
+              <%= link_to "お気に入り", user_likes_path(current_user) %>
+            </li>
           </ul>
         </span>
       </div>
