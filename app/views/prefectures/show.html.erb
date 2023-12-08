@@ -17,6 +17,9 @@
               <div class="show-article-title">
                 <%= article.title %>
               </div>
+              <div id="like-btn<%= article.id %>">
+                <%= render partial: "likes/like", locals: { article: article } %>
+              </div>
             </div>
 
             <div class="swiper-container">
