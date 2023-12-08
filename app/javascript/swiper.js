@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
   
     spaceBetween: 100
   });
-
   });
 
 
