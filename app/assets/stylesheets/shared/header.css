@@ -59,7 +59,7 @@ header.header .user_nav .user__info {
   border: 1px solid #d8d8d8;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 header.header .user_nav span:after {
