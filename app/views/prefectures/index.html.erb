@@ -1,5 +1,5 @@
 <%= render "shared/header" %>
-
+<div data-turbo="false">
 <div class="map-main">
   <div class="map-sub">
     <h2 class="map-title">目指せ！47都道府県制覇の旅</h2>
@@ -24,6 +24,7 @@
     <div id="my-map"></div>
       <script type="module" src="<%= asset_path('post.js') %>"></script>
     </div>
+</div>
 </div>
 <%= render "shared/footer" %>
 

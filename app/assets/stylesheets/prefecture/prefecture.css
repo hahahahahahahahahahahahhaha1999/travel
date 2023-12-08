@@ -104,7 +104,6 @@
 
 
 /* show.html.erb */ 
-
 .article-new-btn {
   position: absolute;
   top: 75px;
@@ -149,6 +148,7 @@
   margin: 90px 20px 20px;
   overflow: hidden;
   position: relative; 
+  z-index: 1; 
 }
 
 .swiper-slide.index-img {
