@@ -147,11 +147,6 @@
   justify-content: space-around;
 }
 
-.edit-article-likes {
-  display: flex;
-  justify-content: space-between;
-}
-
 .edit-main-mypage {
   top: 100px;
 }
@@ -166,6 +161,7 @@
   font-size: 30px;
   font-weight: 900;
   padding-left: 50px;
+  
 }
 
 

@@ -107,14 +107,14 @@
 
 .article-new-btn {
   position: absolute;
-  top: 70px;
+  top: 100px;
   left: 50px;
 }
 
 .show-container {
   position: relative;
   max-width: 100%;
-  margin: 200px 100px;
+  margin: 250px 100px;
   padding: 20px;
   border-radius: 8px;
   height: 200px;
