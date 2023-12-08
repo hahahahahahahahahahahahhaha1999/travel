@@ -47,6 +47,8 @@ var areaLinks = {
   46: '/prefectures/46',
   47: '/prefectures/47'
   };
+
+  document.addEventListener("turbo:load", (event) => {
   var d = new jpmap.japanMap(document.getElementById("my-map"), {
     areas: [
     {code : 1, name: "北海道", color: "#48d1cc", hoverColor: "#b3b2ee"},
@@ -107,3 +109,6 @@ var areaLinks = {
     location.href = areaLinks[data.area.code];
   }
   });
+});
+
+ 

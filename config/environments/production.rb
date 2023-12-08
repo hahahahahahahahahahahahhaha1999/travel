@@ -92,6 +92,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 end
 
-# Compress JavaScripts and CSS.
-config.assets.js_compressor = Terser.new(compress: { drop_console: true })
+
 

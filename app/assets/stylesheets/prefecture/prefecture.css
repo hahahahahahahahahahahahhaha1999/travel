@@ -137,14 +137,12 @@
   margin-bottom: 20px;
 }
 
-
 .swiper-container {
   max-width: 100%;
   margin: 90px 20px 20px;
   overflow: hidden;
-  position: relative;
+  position: relative; 
 }
-
 
 .swiper-slide.index-img {
   height: 300px;
@@ -159,6 +157,11 @@
   transform-origin: bottom center;
 }
 
+.swiper-pagination, .swiper-button-next, .swiper-button-prev {
+  z-index: -1;
+
+}
+
 .space {
   height: 100px; 
 }
@@ -170,6 +173,7 @@
 .sample-p {
   font-weight: 900;
 }
+
 
 
 
