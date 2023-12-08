@@ -161,7 +161,7 @@
   font-size: 30px;
   font-weight: 900;
   padding-left: 50px;
-  
+
 }
 
 
@@ -175,17 +175,7 @@
   justify-content: space-around;
 }
 
-.new-btn {
-  text-decoration: none;
-  border: 1px solid #4285f4;
-  color: #FFFFFF;
-  background-color: #4285f4;
-  text-align: center;
-  margin: 10px; 
-  display: inline-block;
-  cursor: pointer;
-  border-radius: 5px;
-}
+
 
 .new-btn:hover, .new-article-btn:hover {
   background-color: #3c78d8;
