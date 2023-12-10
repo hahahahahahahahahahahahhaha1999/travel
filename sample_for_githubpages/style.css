@@ -1,0 +1,22 @@
+.main{
+  width: 700px;
+  margin: 0 auto;
+  color: #333333;
+}
+
+p{
+  margin-top: 40px;
+  padding: 16px;
+  color: #333333;
+  font-weight: bold;
+}
+
+.firstbox{
+  background-color: #f6f6f6;
+  border: solid 1px; 
+}
+
+.secondbox{
+  background-color: #f6f6f6;
+  border: solid 1px; 
+}

@@ -9,7 +9,7 @@
 ### Association
 
 has_many :articles
-has_many :favorites
+has_many :likes
 
 
 ## prefectures テーブル
@@ -42,10 +42,10 @@ has_many :favorites
 
 - belongs_to :user
 - belongs_to :prefecture
-- has_many :favorites
+- has_many :likes
 
 
-## favorites テーブル
+## likes テーブル
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |

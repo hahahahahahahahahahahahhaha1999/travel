@@ -50,6 +50,10 @@ header.header .user_nav ul.user__info li {
   position: relative;
 }
 
+header.header .user_nav .grid-6 {
+  position: relative;
+}
+
 header.header .user_nav .user__info {
   display: none;
   position: absolute;
@@ -62,6 +66,7 @@ header.header .user_nav .user__info {
   margin-top: 20px;
 }
 
+
 header.header .user_nav span:after {
   content: '▼';
   font-size: .7em;
@@ -72,7 +77,7 @@ header.header .user_nav span:after {
  color: #191970;
 }
 
-header.header .user_nav:hover .user__info {
+header.header .user_nav .grid-6:hover .user__info {
   display: block;
   list-style: none;
 }
