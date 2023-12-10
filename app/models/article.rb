@@ -5,7 +5,7 @@ class Article < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :partner
   belongs_to :travel_site
-  has_many :likes
+  has_many :likes, dependent: :destroy
 
   def liked_by?(user)
     likes.where(user_id: user.id).exists?
