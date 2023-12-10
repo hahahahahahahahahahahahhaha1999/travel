@@ -46,7 +46,7 @@ header.header div.header__bar.row div.grid-6 a.post {
 }
 
 
-header.header .user_nav {
+header.header .user_nav ul.user__info li {
   position: relative;
 }
 
@@ -62,11 +62,6 @@ header.header .user_nav .user__info {
   margin-top: 20px;
 }
 
-header.header .user_nav:hover .user__info {
-  display: block;
-  list-style: none;
-}
-
 header.header .user_nav span:after {
   content: '▼';
   font-size: .7em;
@@ -74,7 +69,13 @@ header.header .user_nav span:after {
   position: absolute;
   top: 10px;
   transform: translateY(-50%);
-  color: #191970;
+ color: #191970;
+}
+
+header.header .user_nav:hover .user__info {
+  display: block;
+  list-style: none;
+  color: #87CEFA;
 }
 
 header.header .user_nav .user__info li a {
