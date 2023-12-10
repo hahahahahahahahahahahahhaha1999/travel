@@ -46,11 +46,7 @@ header.header div.header__bar.row div.grid-6 a.post {
 }
 
 
-header.header .user_nav ul.user__info li {
-  position: relative;
-}
-
-header.header .user_nav .grid-6 {
+header.header .user_nav {
   position: relative;
 }
 
@@ -66,6 +62,10 @@ header.header .user_nav .user__info {
   margin-top: 20px;
 }
 
+header.header .user_nav:hover .user__info {
+  display: block;
+  list-style: none;
+}
 
 header.header .user_nav span:after {
   content: '▼';
@@ -74,12 +74,7 @@ header.header .user_nav span:after {
   position: absolute;
   top: 10px;
   transform: translateY(-50%);
- color: #191970;
-}
-
-header.header .user_nav .grid-6:hover .user__info {
-  display: block;
-  list-style: none;
+  color: #191970;
 }
 
 header.header .user_nav .user__info li a {
