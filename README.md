@@ -8,7 +8,7 @@
 https://travel-ym5f.onrender.com
 
 # テスト用アカウント
-・メールアドレス：test@test.com
+・メールアドレス：test@test.com<br>
 ・パスワード：test1234
 
 # 利用方法
