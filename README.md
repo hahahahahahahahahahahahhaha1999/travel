@@ -1,58 +1,56 @@
-## users テーブル
+# アプリケーション名
+旅行日記(旅行共有アプリ)
 
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| nickname           | string     | null: false                    |
-| email              | string     | null: false                    |
-| encrypted_password | string     | null: false                    | 
+# アプリケーション概要
+旅行を日記のように記録し、かつ他のユーザーに共有できるアプリです。
 
-### Association
+# URL
+https://travel-ym5f.onrender.com
 
-has_many :articles
-has_many :likes
+# テスト用アカウント
+・メールアドレス：test@test.com
+・パスワード：test1234
 
+# 利用方法
+1.トップページのヘッダーからユーザー新規登録を行います
+2.新規投稿ボタンから、旅行の内容を入力して投稿します
+3.日本地図の各都道府県をクリックすると、ユーザーが投稿した旅行の記事を閲覧することができます
+4.ヘッダーの自身の名前のところをクリックすると、マイページやお気に入りページがあります
+5.旅行の記事にいいねボタンを押すと、お気に入りページに追加されます
 
-## prefectures テーブル
+# アプリケーションを作成した背景
+このオリジナルアプリの開発に至った経緯は、旅先の思い出を手軽に記録して残したいという思いからでした。私は旅行が趣味なのですが、「あの観光地にはいつ行ったのか」「昔行った旅館の名前は何だったか」など、思い出せないことが多々ありました。記録として、写真や旅行予約サイトなどありますが、見返したり整理するには手間がかかりました。
+そこで旅先での思い出をアプリを使って記事にまとめ投稿できることで、手軽に整理し思い出すことができ、かつ他のユーザーが投稿した旅行記事を閲覧することで、新しい旅行先の発見や参考になる情報を得ることができるアプリを作成したいと考えました。
 
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| name               | string     | null: false                    |
+# 洗い出した要件
+https://docs.google.com/spreadsheets/d/10NR4Nj8RDOQ2X2Cw5JIc_tZ94kqigN--vfZ1dtAp_DU/edit#gid=982722306
 
-### Association
+# 実装予定の機能
+WEBサイトをレスポンシブ化することです。現在はそれぞれの表示領域に対応できていないため、スマホ・タブレットで使用すると文字が見にくいものとなっています。より幅広いユーザーが閲覧しやすいように対応させていきたいと考えています。
 
-- has_many :articles
+# データベース設計
+[![Image from Gyazo](https://i.gyazo.com/8d2ae2b8d340f6afb93f04937692d1ed.png)](https://gyazo.com/8d2ae2b8d340f6afb93f04937692d1ed)
 
+# 画面遷移図
+[![Image from Gyazo](https://i.gyazo.com/076b1d59be73d069f1b7c01ecbb06704.png)](https://gyazo.com/076b1d59be73d069f1b7c01ecbb06704)
 
-## articles テーブル
+# 開発環境
+・フロントエンド
+ JavaScript
+・バックエンド
+Ruby（Ruby on Rails）
+・インフラ
+PostgreSQL/Render
+・テキストエディタ
+Visual Studio Code
 
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| title              | string     | null: false                    |
-| check_in           | date       | null: false                    |
-| check_out          | date       | null: false                    |
-| partner            | integer    | null: false                    |
-| hotel              | string     | null: false                    |
-| price              | integer    | null: false                    |
-| travel_site        | integer    | null: false                    |
-| content            | text       | null: false                    |
-| user               | references | null: false, foreign_key: true | 
-| prefecture         | references | null: false, foreign_key: true | 
+# 工夫したポイント
+工夫した点は、主に投稿される旅行記事の内容に焦点を当てました。
+アプリの開発に至った背景は、旅先の思い出を手軽に整理し、迅速に振り返ることができる手段を提供したいという動機に基づいています。実際に身近な人にヒアリングし、「写真」や「旅行日程」などの基本的な要素に加えて、「旅先での費用」や「旅行予約したサイト」といった情報も投稿できるように工夫しました。
+この取り組みにより、ユーザーは自身の旅行経験をより詳細かつ網羅的に記録することが可能になります。
 
-### Association
+# 改善点
+いいね機能の非同期通信化です。現在のいいね機能は同期通信を採用しており、ユーザーがいいねを押すたびにページの読み込みが発生しています。ユーザーがスムーズに操作でき、かつパフォーマンスの向上を図るため、JavaScriptを活用し、いいね機能を非同期通信化する計画を進めています。
 
-- belongs_to :user
-- belongs_to :prefecture
-- has_many :likes
-
-
-## likes テーブル
-
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| user               | references | null: false, foreign_key: true |
-| article            | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-- belongs_to :article
+# 制作時間
+100時間
