@@ -1,5 +1,5 @@
- /* index.html.erb */
- .map-main {
+/* index.html.erb */
+.map-main {
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -18,11 +18,20 @@
   padding-bottom: 70px;
   
   }
-  
+
+/* index.html.erb */
 @media (min-width: 768px) {
   .map {
     width: 50%;
   }
+
+  /* スマホ共通サイズ */
+@media (min-width: 375px) {
+  .map {
+    width: 50%; /* Adjusted for full width on smaller screens */
+  }
+}
+  
 
   .cta_btn03 {
     max-width: 350px;
